@@ -1,8 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import logo from "./logo.svg";
 
 function App() {
+  const [permissionValue, setPermissionValue] =
+    useState<NotificationPermission>();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -16,8 +19,17 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn Reactssss
         </a>
+        {/* <button
+          onClick={() => {
+            Notification.requestPermission().then((result) => {
+              console.log("Notification permission:", result);
+            });
+          }}
+        >
+          Request permission - {permissionValue}
+        </button> */}
       </header>
     </div>
   );
